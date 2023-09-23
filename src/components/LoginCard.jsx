@@ -83,7 +83,7 @@ export default function LoginCard() {
                             <FormLabel>Username</FormLabel>
                             <Input type="text"
                                 value={inputs.username}
-                                onChange={(e) => setInputs((inputs) => ({ ...inputs, username: e.target.value }))}
+                                onChange={(e) => setInputs((prevInputs) => ({ ...prevInputs, username: e.target.value }))}
                             />
                         </FormControl>
                         <FormControl id="password" isRequired>
@@ -91,7 +91,7 @@ export default function LoginCard() {
                             <InputGroup>
                                 <Input type={showPassword ? 'text' : 'password'}
                                     value={inputs.password}
-                                    onChange={(e) => setInputs((inputs) => ({ ...inputs, password: e.target.value }))}
+                                    onChange={(e) => setInputs((prevInputs) => ({ ...prevInputs, password: e.target.value }))}
                                 />
                                 <InputRightElement h={'full'}>
                                     <Button
